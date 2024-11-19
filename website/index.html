@@ -1,48 +1,278 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nikhil Wilson - CV</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Nikhil Wilson - DevOps Engineer</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+        :root {
+            --primary-color: #2d3436;
+            --secondary-color: #0984e3;
+            --accent-color: #00cec9;
+            --text-color: #2d3436;
+            --background-color: #f5f6fa;
+            --card-background: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--background-color);
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 2rem auto;
+            padding: 2rem;
+            background-color: var(--card-background);
+            border-radius: 16px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 2rem;
+            padding: 2rem;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            border-radius: 12px;
+            color: white;
+        }
+
+        .name {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            background: linear-gradient(45deg, var(--accent-color), #74b9ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-top: 1rem;
+        }
+
+        .social-links a {
+            color: white;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: color 0.3s ease;
+        }
+
+        .social-links a:hover {
+            color: var(--accent-color);
+        }
+
+        section {
+            margin-bottom: 2rem;
+            padding: 1.5rem;
+            background: var(--card-background);
+            border-radius: 12px;
+            border: 1px solid rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: var(--secondary-color);
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--accent-color);
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            padding: 1rem;
+        }
+
+        .skill-item {
+            background: rgba(9, 132, 227, 0.1);
+            padding: 1rem;
+            border-radius: 12px;
+            font-size: 0.95rem;
+            text-align: left;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(9, 132, 227, 0.2);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        }
+
+        .skill-item:hover {
+            transform: translateY(-3px);
+            background: rgba(9, 132, 227, 0.15);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .skill-category {
+            font-weight: 700;
+            color: var(--secondary-color);
+            margin-right: 0.5rem;
+            display: block;
+            margin-bottom: 0.25rem;
+            font-size: 1rem;
+        }
+
+        .skill-details {
+            color: var(--text-color);
+            opacity: 0.9;
+        }
+
+        .experience-item,
+        .project-item,
+        .education-item {
+            margin-bottom: 1.5rem;
+            padding: 1rem;
+            border-left: 3px solid var(--secondary-color);
+            background: rgba(9, 132, 227, 0.05);
+            border-radius: 0 8px 8px 0;
+        }
+
+        h3 {
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .meta-info {
+            font-size: 0.9rem;
+            color: var(--secondary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        ul {
+            list-style-position: inside;
+            margin-top: 0.5rem;
+        }
+
+        .project-links {
+            margin-top: 0.5rem;
+            display: flex;
+            gap: 1rem;
+        }
+
+        .project-links a {
+            color: var(--secondary-color);
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+
+        .project-links a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                margin: 1rem;
+                padding: 1rem;
+            }
+
+            .social-links {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .skills-grid {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+        }
+    </style>
 </head>
+
 <body>
+    <!-- Previous header content remains the same -->
     <div class="container">
         <header>
-            <h1>Nikhil Wilson</h1>
-            <div class="contact-info">
-                <p><i class="fas fa-envelope"></i> nikhilwilsonk96@gmail.com</p>
-                <p><i class="fas fa-phone"></i> +91-8075368314</p>
-                <p><i class="fab fa-github"></i> github.com/nikhilss219</p>
+            <h1 class="name">Nikhil Wilson</h1>
+            <div class="social-links">
+                <a href="mailto:nikhilwilsonk96@gmail.com">
+                    <i class="fas fa-envelope"></i> nikhilwilsonk96@gmail.com
+                </a>
+                <a href="tel:+918075368314">
+                    <i class="fas fa-phone"></i> +91-8075368314
+                </a>
+                <a href="https://github.com/nikhilwilsonk" target="_blank">
+                    <i class="fab fa-github"></i> GitHub
+                </a>
+                <a href="www.linkedin.com/in/nikhil-wilsonk96" target="_blank">
+                    <i class="fab fa-linkedin"></i> LinkedIn
+                </a>
             </div>
         </header>
 
         <section id="summary">
             <h2>Summary</h2>
-            <p>Motivated and adaptable developer with 3 years of experience, including 2 years in government-sponsored projects and 1 year in ERP solution development. Skilled at quickly learning and applying new technologies, with a strong passion for DevOps. Seeking an internship opportunity to contribute to and grow within a dynamic DevOps team.</p>
+            <p>Solution-driven developer with 3 years of experience
+                architecting and deploying applications
+                across government and enterprise environments.
+                Skilled in DevOps practices including cloud
+                infrastructure (Azure), container orchestration
+                (Docker, Kubernetes), and automated pipelines (GitLab CI).
+                Seeking to bring my technical expertise and continuous
+                improvement mindset to a DevOps-focused role.</p>
         </section>
 
         <section id="skills">
             <h2>Skills Summary</h2>
-            <ul class="skills-list">
-                <li><span>Version Control:</span> Git, GitHub, GitLab</li>
-                <li><span>CI/CD Tools:</span> GitLab CI</li>
-                <li><span>Cloud Platforms:</span> Azure</li>
-                <li><span>Containers & Orchestration:</span> Docker, Kubernetes</li>
-                <li><span>Monitoring & Logging:</span> Prometheus, Grafana</li>
-                <li><span>Configuration Management:</span> Ansible</li>
-                <li><span>Scripting:</span> Bash, Python, JavaScript</li>
-                <li><span>Linux Administration:</span> Ubuntu</li>
-                <li><span>ML frameworks:</span> Sklearn, Tensorflow, Pytorch, Rapids.Ai</li>
-            </ul>
+            <div class="skills-grid">
+                <div class="skill-item">
+                    <span class="skill-category">Version Control:</span>
+                    <span class="skill-details">Git, GitHub</span>
+                </div>
+                <div class="skill-item">
+                    <span class="skill-category">CI/CD:</span>
+                    <span class="skill-details">GitLab CI</span>
+                </div>
+                <div class="skill-item">
+                    <span class="skill-category">Cloud:</span>
+                    <span class="skill-details">Azure, Azure DevOps</span>
+                </div>
+                <div class="skill-item">
+                    <span class="skill-category">Containers:</span>
+                    <span class="skill-details">Docker, Kubernetes</span>
+                </div>
+                <div class="skill-item">
+                    <span class="skill-category">Monitoring:</span>
+                    <span class="skill-details">Prometheus, Grafana</span>
+                </div>
+                <div class="skill-item">
+                    <span class="skill-category">Config Management:</span>
+                    <span class="skill-details">Ansible</span>
+                </div>
+                <div class="skill-item">
+                    <span class="skill-category">Scripting:</span>
+                    <span class="skill-details">Bash, Python, JavaScript</span>
+                </div>
+                <div class="skill-item">
+                    <span class="skill-category">Operating System:</span>
+                    <span class="skill-details">Linux (Ubuntu)</span>
+                </div>
+                <div class="skill-item">
+                    <span class="skill-category">Machine Learning:</span>
+                    <span class="skill-details">Sklearn, Tensorflow, PyTorch</span>
+                </div>
+            </div>
         </section>
-
         <section id="experience">
             <h2>Experience</h2>
             <div class="experience-item">
                 <h3>CSIR - National Chemical Laboratory, Pune</h3>
                 <p class="job-title">Project Associate-I (Full-time)</p>
-                <p class="date">July 2022 - Present</p>
+                <p class="date">July 2022 - September 2024</p>
                 <ul>
                     <li>Machine learning models for solid state hydrogen storage: Worked on a government-sponsored project focused on solid-state hydrogen storage, developing machine learning models and Analyzed data to provide valuable insights and improve material performance predictions.</li>
                     <li>Web-application for predicting alloy properties using ML models: Built multiple web applications for utilizing ML models and predict user input compositions properties.</li>
@@ -57,24 +287,62 @@
                 </ul>
             </div>
         </section>
+        <section id="cloud-projects">
+            <h2>Cloud Projects</h2>
+            <div class="project-item">
+                <h3>3-Tier Architecture in Azure</h3>
+                <p>Designed and implemented a highly available and scalable 3-tier architecture in Azure, incorporating:
+                </p>
+                <ul>
+                    <li>Web-tier with VM Scale Sets and Application Gateway for load balancing</li>
+                    <li>App-tier with internal load balancer for optimal traffic distribution</li>
+                    <li>Database-tier with high availability configuration</li>
+                </ul>
+                <div class="project-links">
+                    <a href="https://dev.to/nikhil_wilson_dfb43fe6436/3-tier-architecture-in-azure-cloud-a-comprehensive-deployment-guide-5a82" target="_blank"><i class="fas fa-blog"></i> Read More</a>
+                </div>
+            </div>
 
+            <div class="project-item">
+                <h3>Personal Website - Azure Static Web App</h3>
+                <p>Developed and deployed a personal website using Azure storage with enhanced delivery and
+                    accessibility:</p>
+                <ul>
+                    <li>Utilized Azure CDN for global content delivery</li>
+                    <li>Implemented custom domain mapping with Azure CDN endpoint</li>
+                    
+                </ul>
+                <div class="project-links">
+                    <a href="https://www.nikhilwilsonresume.cloud/" target="_blank"><i class="fas fa-globe"></i> Visit Website</a>
+                    <a href="https://dev.to/nikhil_wilson_dfb43fe6436/hosting-a-static-website-in-azure-storage-with-cdn-and-cicd-pipeline-integration-20b6" target="_blank"><i class="fas fa-blog"></i> Read More</a>
+                </div>
+            </div>
+        </section>
         <section id="projects">
             <h2>Projects</h2>
             <div class="project-item">
                 <h3>Web-application for prediction of hydrogen storage properties of metal alloys</h3>
-                <p>Developed multiple web-application for the HEART framework, allowing users to input compositions and calculate multiple hydrogen storage properties by integrating machine learning models. Built the application with Python's Flask module and deployed in remote cluster using Docker container for portability.</p>
+                <p>Developed multiple web-application for the HEART framework, allowing users to input compositions and
+                    calculate multiple hydrogen storage properties by integrating machine learning models. Built the
+                    application with Python's Flask module and deployed in remote cluster using Docker container for
+                    portability.</p>
             </div>
             <div class="project-item">
                 <h3>Machine learning models for prediction of metal alloys hydrogen storage properties</h3>
-                <p>Worked towards developing deep learning models using PyTorch and Tensorflow for crystal structure stability. Utilized Nvidia container toolkit for building GPU optimized docker containers in remote supercomputers. Built an updated database comprising the latest materials and compositions, optimized for the machine learning models.</p>
+                <p>Worked towards developing deep learning models using PyTorch and Tensorflow for crystal structure
+                    stability. Utilized Nvidia container toolkit for building GPU optimized docker containers in remote
+                    supercomputers. Built an updated database comprising the latest materials and compositions,
+                    optimized for the machine learning models.</p>
             </div>
             <div class="project-item">
                 <h3>Experiment logger mobile application</h3>
-                <p>Developed a react-native application for logging experimental results in NCL, Pune. Utilized expo to build the application, Express.js as backend and MongoDB as the database.</p>
+                <p>Developed a react-native application for logging experimental results in NCL, Pune. Utilized expo to
+                    build the application, Express.js as backend and MongoDB as the database.</p>
             </div>
             <div class="project-item">
                 <h3>Developed screens for VIBS-explorer ERP solutions</h3>
-                <p>Built multiple screens for the VIBS-explorer ERP solutions for Gensys Technologies, UAE. Development in ASP.net framework using C#, HTML/CSS, JavaScript and MVC architecture.</p>
+                <p>Built multiple screens for the VIBS-explorer ERP solutions for Gensys Technologies, UAE. Development
+                    in ASP.net framework using C#, HTML/CSS, JavaScript and MVC architecture.</p>
             </div>
         </section>
 
@@ -96,4 +364,5 @@
     </div>
     <script src="https://kit.fontawesome.com/9bd689059f.js" crossorigin="anonymous"></script>
 </body>
+
 </html>
